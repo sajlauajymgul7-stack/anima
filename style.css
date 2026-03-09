@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.animated-button {
+    background-color: #E1E1DF; /* Начальный цвет из примера [cite: 23, 32] */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px; /* Закругление [cite: 37] */
+    cursor: pointer;
+    font-size: 18px;
+    
+    /* Свойство transition — это ключ к плавности [cite: 13, 29] */
+    /* Оно заставляет изменения длиться 0.3 секунды, а не происходить мгновенно */
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+.animated-button:hover {
+    background-color: #1F1F1E; /* Меняем цвет фона [cite: 40] */
+    color: #FFFFFF;            /* Меняем цвет текста для контраста [cite: 41] */
+    
+    /* Добавляем трансформацию (увеличение) [cite: 47, 53] */
+    transform: scale(1.1);     /* Увеличиваем кнопку на 10% */
+}
